@@ -1,9 +1,3 @@
-/* =============================================
-   SHIVAS PORTFOLIO — SKETCHBOOK THEME
-   Clean, single :root block — no conflicts
-   ============================================= */
-
-/* --- LIGHT / DARK MODE VARIABLES --- */
 :root {
   color-scheme: light dark;
   --paper-bg:      light-dark(#fdfbf7, #000000);
@@ -63,8 +57,8 @@ h1, h2, h3 { font-family: 'Architects Daughter', cursive; }
 .scroll-top:hover { transform: translate(1px, 1px); box-shadow: 2px 2px 0 var(--pencil-green); }
 
 /* =============================================
-   INDEX PAGE — HERO
-   ============================================= */
+ *  INDEX PAGE — HERO
+ *  ============================================= */
 .sketch-hero {
   position: relative;
   display: flex;
@@ -77,17 +71,17 @@ h1, h2, h3 { font-family: 'Architects Daughter', cursive; }
   padding-bottom: 150px;
   gap: 4rem;
 }
-.hero-content { 
+.hero-content {
   flex: 1 1 50%;
-  max-width: 600px; 
-  z-index: 2; 
+  max-width: 600px;
+  z-index: 2;
 }
 
-.hero-visual { 
+.hero-visual {
   flex: 1 1 50%;
-  display: flex; 
-  justify-content: center; 
-  z-index: 2; 
+  display: flex;
+  justify-content: center;
+  z-index: 2;
 }
 
 /* --- BADGE --- */
@@ -218,18 +212,18 @@ h1, h2, h3 { font-family: 'Architects Daughter', cursive; }
 .pencil-green { color: var(--pencil-green); }
 
 /* =============================================
-   SEA & BOAT ANIMATION
-   ============================================= */
+ *  SEA & BOAT ANIMATION
+ *  ============================================= */
 .sea-container {
   position: absolute;
   bottom: 0;
-  left: 0;
-  width: 100vw;
+  left: -5vw;
+  width: 110vw;
   height: 150px;
   background: repeating-linear-gradient(
     0deg,
     rgba(86,163,255,0.1), rgba(86,163,255,0.1) 5px,
-    transparent 5px, transparent 15px
+                                        transparent 5px, transparent 15px
   );
   border-top: 3px solid var(--pencil-blue);
   border-radius: 255px 15px 225px 15px / 15px 225px 15px 255px;
@@ -298,8 +292,8 @@ h1, h2, h3 { font-family: 'Architects Daughter', cursive; }
 }
 
 /* =============================================
-   ABOUT PAGE
-   ============================================= */
+ *  ABOUT PAGE
+ *  ============================================= */
 .about-page { padding-bottom: 5rem; }
 
 .page-container {
@@ -542,8 +536,8 @@ h1, h2, h3 { font-family: 'Architects Daughter', cursive; }
 }
 
 /* =============================================
-   RESPONSIVE / MOBILE
-   ============================================= */
+ *  RESPONSIVE / MOBILE
+ *  ============================================= */
 @media (max-width: 800px) {
   /* Hero */
   .sketch-hero {
@@ -599,8 +593,8 @@ h1, h2, h3 { font-family: 'Architects Daughter', cursive; }
 }
 
 /* =============================================
-   BACKGROUND FLOATING ICONS
-   ============================================= */
+ *  BACKGROUND FLOATING ICONS
+ *  ============================================= */
 .bg-icons {
   position: fixed;
   inset: 0;
