@@ -15,7 +15,6 @@
 
 <body class="about-page">
 
-  <!-- Background floating icons -->
   <div class="bg-icons" aria-hidden="true">
     <i class="fa-brands fa-python" style="--ix:4vw;  --iy:6vh;  --is:2.2rem; --ir:-15deg; --id:0s"></i>
     <i class="fa-solid fa-database" style="--ix:14vw; --iy:22vh; --is:1.8rem; --ir:10deg;  --id:1.2s"></i>
@@ -51,12 +50,10 @@
     <i class="fa-solid fa-hard-drive" style="--ix:11vw; --iy:61vh; --is:1.7rem; --ir:13deg;  --id:1.7s"></i>
   </div>
 
-  <!-- Scroll to Top -->
   <button class="scroll-top" id="scroll-top" aria-label="Scroll to top" title="Back to top">↑</button>
 
   <div class="page-container">
 
-    <!-- NAVIGATION -->
     <div class="nav-bar">
       <a href="index.html" class="btn-sketch btn-blue back-btn">⬅ Home</a>
 
@@ -91,7 +88,6 @@
       </div>
 
     </section>
-    <!-- SKILLS -->
     <section id="Skills" class="skills-section">
       <h2 class="section-title highlight-text">Languages and Tools</h2>
       <h4 class="handwriting pencil-blue" style="margin-top: -1.5rem; margin-bottom: 2rem;">My Skills</h4>
@@ -112,33 +108,36 @@
       </div>
     </section>
 
-    <!-- PROJECTS -->
     <section id="Projects" class="projects-section">
       <h2 class="section-title highlight-text">Some Things I've Built</h2>
       <h4 class="handwriting pencil-blue" style="margin-top: -1.5rem; margin-bottom: 2rem;">Projects</h4>
       <div class="projects-grid">
+
         <div class="drawn-box project-card">
-          <h3>Customer Orders Analysis Dashboard</h3>
-          <p class="handwriting">Interactive Power BI dashboard analyzing sales trends and customer behavior.</p>
-          <a href="https://github.com/Shivas-A54/customer-orders-analysis-powerbi" target="_blank"
+          <h3>Text-to-SQL Query Generator</h3>
+          <p class="handwriting">
+            Created an intelligent web application that converts natural language queries into executable SQL commands using the Google Gemini API. Enabled instant SQL query generation and data visualization, enhancing data accessibility for non-technical users.
+            <br><br>
+            <span class="pencil-blue"><b>Tools Used:</b></span> Python, Streamlit, MySQL, Groq, Pandas.
+          </p>
+          <a href="https://github.com/Shivas-A54/Prompt-to-Query" target="_blank"
             class="btn-sketch btn-blue project-link">View Project →</a>
         </div>
+
         <div class="drawn-box project-card">
-          <h3>Data Analytics with Python &amp; SQL</h3>
-          <p class="handwriting">End-to-end analysis using Pandas, SQL, and Jupyter Notebooks.</p>
-          <a href="https://github.com/Shivas-A54/Data-Analytics-Project-Python-SQL" target="_blank"
+          <h3>Stateless RAG</h3>
+          <p class="handwriting">
+            Built a Retrieval-Augmented Generation system without a vector database by replacing embedding-based retrieval with LLM-guided tree navigation using the PageIndex API, eliminating local infrastructure overhead. Orchestrated a two-stage Gemini 2.0 Flash pipeline tree traversal for section selection followed by cited answer generation, achieving stateless, per-query document QA on PDFs.
+            <br><br>
+            <span class="pencil-blue"><b>Technologies:</b></span> Python, Gemini 2.0 Flash, PageIndex API.
+          </p>
+          <a href="https://github.com/Shivas-A54/Stateless_RAG" target="_blank"
             class="btn-sketch btn-blue project-link">View Project →</a>
         </div>
-        <div class="drawn-box project-card">
-          <h3>SQL Data Warehouse Project</h3>
-          <p class="handwriting">Scalable data warehouse with ETL pipelines and dimensional modeling.</p>
-          <a href="https://github.com/Shivas-A54/sql-data-warehouse-project" target="_blank"
-            class="btn-sketch btn-blue project-link">View Project →</a>
-        </div>
+
       </div>
     </section>
 
-    <!-- CERTIFICATES -->
     <section id="Certificates" class="certs-section">
       <h2 class="section-title highlight-text">Certifications</h2>
       <div class="certs-grid">
@@ -193,7 +192,6 @@
       </div>
     </section>
 
-    <!-- CONTACT -->
     <section id="contact" class="contact-section">
       <h2 class="section-title highlight-text">Let's Connect!</h2>
       <h4 class="handwriting pencil-blue" style="margin-top: -1.5rem; margin-bottom: 2rem;">Contact</h4>
@@ -203,7 +201,6 @@
           <div class="contact-icon">📧</div>
           <h3>Email Me</h3>
           <p class="handwriting">Drop me a message anytime — I usually reply within a day!</p>
-          <!-- Replace with your actual email -->
           <a href="mailto:shivas2004@zohomail.in" class="btn-sketch btn-blue"
             style="margin-top:1rem; display:inline-block;"><span class="__cf_email__"
               data-cfemail="76051e1f00170536130e171b061a135815191b">Email-me</span></a>
@@ -229,9 +226,7 @@
 
     </section>
 
-  </div><!-- end page-container -->
-
-  <footer class="sketch-footer">
+  </div><footer class="sketch-footer">
     <p align="center">
       <a href="LICENSE"><img src="https://img.shields.io/badge/License-MIT-yellow.svg" alt="License: MIT"></a>
       <a href="https://opensource.org/"><img src="https://img.shields.io/badge/Open%20Source-%E2%9D%A4-brightgreen.svg"
