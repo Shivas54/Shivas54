@@ -5,6 +5,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Shivas | Data Sketchbook</title>
+  <link rel="icon" type="image/png" href="assets/css/images.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Caveat:wght@400;600&display=swap"
@@ -70,13 +71,29 @@
     </div>
 
     <section id="About" class="about-section">
-      <div class="photo-frame profile-pic">
+
+      <!-- UPDATED FLIP CONTAINER -->
+      <div class="photo-frame profile-pic flip-container">
         <div class="tape"></div>
-        <div class="photo-placeholder">
-          <img src="assets/img.png" alt="Shivas Arulselvam Profile Picture" loading="lazy"
-            style="filter: none !important; mix-blend-mode: normal;">
+        <div class="flipper">
+          <!-- FRONT SIDE (Your normal photo) -->
+          <div class="front">
+            <div class="photo-placeholder">
+              <img src="assets/css/img.png" alt="Shivas Arulselvam Profile Picture" loading="lazy"
+                style="filter: none !important; mix-blend-mode: normal; width: 100%;">
+            </div>
+          </div>
+          <!-- BACK SIDE (Your hidden image) -->
+          <div class="back">
+            <div class="photo-placeholder">
+              <img src="assets/css/image.jpg" alt="Secret Reveal Image" loading="lazy"
+                style="filter: none !important; mix-blend-mode: normal; width: 100%;">
+            </div>
+          </div>
         </div>
       </div>
+      <!-- END FLIP CONTAINER -->
+
       <div class="drawn-box about-text">
         <h2 class="section-title">About Me</h2>
         <p class="handwriting">
@@ -88,6 +105,7 @@
       </div>
 
     </section>
+
     <section id="Skills" class="skills-section">
       <h2 class="section-title highlight-text">Languages and Tools</h2>
       <h4 class="handwriting pencil-blue" style="margin-top: -1.5rem; margin-bottom: 2rem;">My Skills</h4>
@@ -223,7 +241,6 @@
         </div>
       </div>
 
-
     </section>
 
   </div><footer class="sketch-footer">
@@ -288,6 +305,29 @@
       window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
+    // --- ANTI-SNIPPING / BLUR EFFECT ---
+    const frontImage = document.querySelector('.front img');
+    const backImage = document.querySelector('.back img');
+
+    if (frontImage && backImage) {
+      // Blur images when the window loses focus (e.g., Snipping Tool opens)
+      window.addEventListener('blur', () => {
+        frontImage.style.transition = 'filter 0.1s ease';
+        backImage.style.transition = 'filter 0.1s ease';
+        frontImage.style.filter = 'blur(15px) grayscale(100%)';
+        backImage.style.filter = 'blur(15px) grayscale(100%)';
+      });
+
+      // Unblur when they click back into the website
+      window.addEventListener('focus', () => {
+        frontImage.style.filter = 'none';
+        backImage.style.filter = 'none';
+      });
+
+      // Disable right-click saving on the images
+      frontImage.addEventListener('contextmenu', (e) => e.preventDefault());
+      backImage.addEventListener('contextmenu', (e) => e.preventDefault());
+    }
 
   </script>
 </body>
